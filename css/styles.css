@@ -8,17 +8,11 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.content {
-    background-color: lightblue;
-    height: 2000px;
-}
-
 header {
-    position: fixed;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color: rgba(247, 158, 158, 1);
+
 }
 
 header .meeting-time {
@@ -53,12 +47,10 @@ header nav .menu .sub-menu a:hover {
 
 header nav .menu .sub-menu ul {
     position: absolute;
-    padding: 10px 20px 0 20px;
-    background-color: rgba(247, 158, 158, 1);
-    border-radius: 10px;
     max-height: 0px;
     overflow: hidden;
-    transition: max-height 0.8s ease-out;
+    z-index: 10;
+    /* transition: max-height 0.8s ease-out; */
 }
 
 header nav .menu .sub-menu:hover ul {
@@ -78,7 +70,6 @@ footer {
     padding: 20px 20px;
     display: flex;
     flex-wrap: wrap;
-    background-color: rgba(247, 158, 158, 1);
 }
 
 footer .masthead {
@@ -109,15 +100,11 @@ footer .copyright {
 
 footer .newsletter {
     position: absolute;
-    padding: 20px;
     display: flex;
     flex-direction: column;
     bottom: 100px;
     right: 180px;
     width: 400px;
-    color: #ffffff;
-    background-color: #000000;
-    border-radius: 5px;
 }
 
 footer .newsletter-form {
@@ -126,20 +113,47 @@ footer .newsletter-form {
 
 footer .newsletter-input {
     flex: 3;
-    margin: 10px 10px 0 0 ;
+    margin: 10px 10px 0 0;
+    padding: 0 0 1px 2px;
     border: none;
-    border-bottom: 1px solid #ffffff;
+    border-bottom: 2px solid #000000;
     outline: none;
-    background-color: #000000;
-    color: #ffffff;
 }
 
 footer .newsletter-button {
     flex: 1;
-    border: 2px solid #000000;
+    border: 1px solid #000000;
     outline: none;
     background-color: #ffffff;
-    border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
 }
+
+.content-box {
+    margin: 5px 0 5px 0;
+    border-top: 2px solid #000000;
+    border-bottom: 2px solid #000000;
+}
+
+.image-slides {
+    height: 400px;
+}
+
+.sign-up {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+}
+
+.sign-up-link {
+    font-size: 36px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000000;
+}
+
+.announcements {
+    height: 400px;
+}
+
