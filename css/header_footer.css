@@ -10,7 +10,7 @@ header {
 header .meeting-time {
     margin: 20px 0 20px 20px;
     font-size: 14px;
-    font-weight: bold;
+    font-weight: bolder;
 }
 
 header nav {
@@ -25,7 +25,8 @@ header nav .menu .sub-menu {
     position: relative;
     margin: 0 20px;
     list-style: none;
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 header nav .menu .sub-menu a {

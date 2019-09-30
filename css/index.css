@@ -1,14 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
 .image-slides-wrapper {
     width: 100%;
     height: 100vh;
@@ -16,6 +5,43 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.home-title {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 120px;
+    font-weight: bolder;
+    color: white;
+    z-index: 5;
+}
+
+.sign-up {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0 30px 0;
+    width: 550px; 
+    background-color: lightgray;
+    border-radius: 15px;
+    opacity: 0.8;
+    font-size: 36px;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.8);
+    transition: 0.6s ease;
+    z-index: 5;
+}
+
+.sign-up:hover {
+    background-color: rgba(0,0,0,0.8);
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .slider {
@@ -63,28 +89,61 @@ body {
     transform: rotateZ(180deg);
 }
 
-.sign-up-link {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.about-us {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    padding: 40px;
     align-items: center;
-    padding: 30px 0 30px 0;
-    width: 550px; 
-    background-color: #000000;
-    border-radius: 15px;
-    opacity: 0.8;
-    font-size: 36px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #ffffff;
-    transition: 0.6s ease;
+    justify-content: center;
 }
 
-.sign-up-link:hover {
-    background-color: rgba(0,0,0,0.7);
+.about-us-title {
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.about-us-desc {
+    font-size: 20px;
+}
+
+.upcoming-events {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.upcoming-events-title {
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.upcoming-events-list {
+    display: flex;
+    list-style: none;
+}
+
+.welcome-week-event {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    background-color: lightblue;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 15px;
+    color: rgba(0, 0, 0, 0.8);
+    transition: opacity 0.8s ease-out;
+    user-select: none;
+}
+
+.welcome-week-event:hover {
+    opacity: 0.5;
 }
 
 .announcements {
