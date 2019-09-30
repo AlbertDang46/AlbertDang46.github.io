@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Bubbler+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bubbler One', sans-serif;
+}
+
 .content-box {
     border-top: 1px solid #000000;
 }
