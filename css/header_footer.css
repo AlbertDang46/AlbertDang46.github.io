@@ -2,7 +2,9 @@ header {
     width: 100%;
     display: flex;
     justify-content: space-between;
-
+    position: fixed;
+    background-image: linear-gradient(to bottom, gray 0%, rgba(255, 255, 255, 0.4) 100%);
+    z-index: 10;
 }
 
 header .meeting-time {
