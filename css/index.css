@@ -140,13 +140,14 @@
     color: rgba(0, 0, 0, 0.8);
     transition: opacity 0.8s ease-out;
     user-select: none;
+    text-align: center;
 }
 
 .welcome-week-event:hover {
     opacity: 0.5;
 }
 
-.announcements {
+/* .announcements {
     height: 400px;
-}
+} */
 

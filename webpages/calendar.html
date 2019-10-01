@@ -1,7 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link href="../css/calendar.css" rel="stylesheet" />
+		<meta charset="UTF-8">
+        <meta name="author" content="Circle K at UCR">
+        <meta name="description" content="Circle K at UCR's official website!">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<title>Circle K @ UCR</title>
+
+		<link rel="stylesheet" type="text/css" href="../css/styles.css">
+		<link rel="stylesheet" type="text/css" href="../css/header_footer.css">
+		<link href="../css/calendar.css" rel="stylesheet" />
+		
         <link href='../fullcalendar/core/main.css' rel='stylesheet' />
         <link href='../fullcalendar/daygrid/main.css' rel='stylesheet' />
         <link href='../fullcalendar/list/main.css' rel='stylesheet' />
@@ -10,63 +20,10 @@
         <script src='../fullcalendar/daygrid/main.js'></script>
         <script src='../fullcalendar/google-calendar/main.js'></script>
 		<script src='../fullcalendar/list/main.js'></script>
-
-		<link rel="stylesheet" type="text/css" href="../css/styles.css">
-		<link rel="stylesheet" type="text/css" href="../css/header_footer.css">
 		
 		<script src="https://kit.fontawesome.com/ca5e0e574f.js"></script>
 
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                let eventsCalendarEl = document.getElementById('eventsCalendar');
-                let eventsCalendar = new FullCalendar.Calendar(eventsCalendarEl, {
-                    plugins: [ 'dayGrid', 'list', 'googleCalendar' ],
-                    header: {
-                        left: 'prev,next today',
-                        center: 'title',
-                        right: 'dayGridMonth,listYear'
-                    },
-                    fixedWeekCount: false,
-                    googleCalendarApiKey: 'AIzaSyAh9AImZEwhdMOwxaMG9Y7ksvoWGLH9L8w',
-                    eventSources: [
-                        {
-                            googleCalendarId: 'ckiucrwebsitecalendar@gmail.com',
-                            color: 'red'
-                        },
-                        {
-                            googleCalendarId: '80ar9i451qn8iie5ce9igq2tco@group.calendar.google.com'
-                        }
-                    ],
-                    eventClick: function(arg) {
-                        window.open(arg.event.url, '_blank', 'width=700,height=600');
-                        arg.jsEvent.preventDefault();
-                    }
-                });
-
-                let agendaCalendarEl = document.getElementById('agendaCalendar');
-                let agendaCalendar = new FullCalendar.Calendar(agendaCalendarEl, {
-                    plugins: [ 'dayGrid', 'list', 'googleCalendar' ],
-                    header: {
-                        left: 'prev,next today',
-                        center: 'title',
-                        right: 'dayGridMonth,listYear'
-                    },
-                    googleCalendarApiKey: 'AIzaSyAh9AImZEwhdMOwxaMG9Y7ksvoWGLH9L8w',
-                    events: {
-                        googleCalendarId: 'ckiucrwebsitecalendar2@gmail.com',
-                        color: 'green'
-                    },
-                    fixedWeekCount: false,
-                    eventClick: function(arg) {
-                        window.open(arg.event.url, '_blank', 'width=700,height=600');
-                        arg.jsEvent.preventDefault();
-                    }
-                });
-
-                eventsCalendar.render();
-                agendaCalendar.render();
-            });
-        </script>
+		<script src="../js/calendar.js"></script>
     </head>
     <body>
         <header>
@@ -77,75 +34,28 @@
 						<a href="../index.html">Home</a>
 					</li>
 					<li class="sub-menu">
-						<a href="#">About</a>
-						<!-- <ul>
-							<li><a href="#">What is Circle K?</a></li>
-							<li><a href="#">Board Members</a></li>
-							<li><a href="#">District Service Initiatives</a></li>
-							<li><a class="sub-menu-section" href="#">District Fundraising Initiatives</a></li>
-						</ul> -->
+						<a href="./about.html">About</a>
 					</li>
 					<li class="sub-menu">
 						<a href="#">Members</a>
-						<!-- <ul>
-							<li><a href="#">Become a Member!</a></li>
-							<li><a href="#">Family / Mentorship System</a></li>
-							<li><a href="#">Member Recognition Program</a></li>
-							<li><a href="#">Member of the Month</a></li>
-							<li><a href="#">Members in Leadership</a></li>
-						</ul> -->
 					</li>
 					<li class="sub-menu">
 						<a href="#">Events</a>
-						<!-- <ul>
-							<li><a href="#">How to Sign Up for Events</a></li>
-							<li><a href="#">Club Events</a></li>
-							<li><a href="#">Division Events</a></li>
-							<li><a href="#">District Events</a></li>
-							<li><a href="#">International Events</a></li>
-							<li><a href="#">Chair an Event</a></li>
-							<li><a href="#">Plan Your Own Service</a></li>
-						</ul> -->
 					</li>
 					<li class="sub-menu">
 						<a href="./calendar.html">Calendar</a>
-						<!-- <ul>
-							<li><a href="#">Club Event Calendar</a></li>
-							<li><a href="#">Club Agenda Calendar</a></li>
-						</ul> -->
 					</li>
 					<li class="sub-menu">
 						<a href="#">Media</a>
-						<!-- <ul>
-							<li><a href="#">Club Newsletter</a></li>
-							<li><a href="#">This Year's Photos and Videos</a></li>
-						</ul> -->
 					</li>
 					<li class="sub-menu">
 						<a href="#">Resources</a>
-						<!-- <ul>
-							<li><a href="#">Club Resources</a></li>
-							<li><a href="#">District Resources</a></li>
-							<li><a href="#">International Resources</a></li>
-							<li><a href="#">Cheers</a></li>
-							<li><a href="#">Acronyms</a></li>
-						</ul> -->
 					</li>
 					<li class="sub-menu">
 						<a href="#">Archive</a>
-						<!-- <ul>
-							<li><a href="#">General Meeting Slides</a></li>
-							<li><a href="#">All Years' Photos and Videos</a></li>
-							<li><a href="#">All Years' Awards</a></li>
-						</ul> -->
 					</li>
 					<li class="sub-menu">
 						<a href="#">Contact Us</a>
-						<!-- <ul>
-							<li><a href="#">Contact Info</a></li>
-							<li><a href="#">Social Media</a></li>
-							<li><a href="#">Board Questions and Feedback</a></li>
-						</ul> -->
 					</li>
 				</ul>
 			</nav>
