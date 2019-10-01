@@ -71,11 +71,11 @@
 }
 
 .slider::before, .slider::after {
-    height: 550px;
-    width: 200px;
-    position: aboslute;
+    height: 100vh;
+    width: 100px;
+    position: absolute;
     content: "";
-    background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 100%);
     z-index: 2;
 }
 
