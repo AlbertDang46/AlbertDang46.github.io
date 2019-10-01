@@ -61,6 +61,12 @@ footer .facebook {
 }
 
 footer .youtube {
+    margin-right: 10px;
+    color: #000000;
+    cursor: pointer;
+}
+
+footer .instagram {
     color: #000000;
     cursor: pointer;
 }
