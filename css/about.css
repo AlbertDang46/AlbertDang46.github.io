@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css?family=Cedarville+Cursive&display=swap');
+
+.about-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 50px 0;
+    font-weight: bold;
+    font-size: 120px;
+}
+
+.about-circle-k {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 30px 100px 30px 100px;
+}
+
+.about-circle-k-title {
+    font-weight: bold;
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+
+.about-circle-k-serve {
+    font-family: 'Cedarville Cursive', cursive;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.about-circle-k-desc {
+    font-size: 20px;
+    line-height: 22pt;
+    text-align: center;
+}
+
+.three-tenets {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 50px 350px 20px 350px;
+}
+
+.three-tenets-title {
+    font-weight: bold;
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+
+.three-tenets-subtitle {
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.three-tenets-list {
+    list-style: none;
+    padding: 0 80px;
+}
+
+.three-tenets-item {
+    margin: 30px 0;
+}
+
+.three-tenets-item-title {
+    font-family: 'Cedarville Cursive', cursive;
+    font-size: 40px;
+}
+
+.three-tenets-item-desc {
+    font-size: 20px;
+}
+
+.circle-k-orgs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 50px 150px;
+}
+
+.circle-k-orgs-title {
+    font-weight: bold;
+    font-size: 35px;
+    margin-bottom: 25px;
+}
+
+.circle-k-orgs-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.circle-k-orgs-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    margin: 0 50px;
+}
+
+.circle-k-orgs-item-logo {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 25px;
+}
+
+.circle-k-orgs-item-button {
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    background-color: black;
+    border-radius: 10px;
+    opacity: 0.8;
+    padding: 15px 35px;
+    margin-bottom: 10px;
+    transition: opacity 0.8s ease-out;
+}
+
+.circle-k-orgs-item-button:hover {
+    opacity: 0.4;
+}
+
+.circle-k-orgs-item-title {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.circle-k-orgs-item-desc {
+    font-size: 18px;
+    line-height: 22pt;
+    text-align: center;
+}

@@ -38,26 +38,6 @@ header nav .menu .sub-menu a:hover {
     opacity: 0.5;
 }
 
-header nav .menu .sub-menu ul {
-    position: absolute;
-    max-height: 0px;
-    overflow: hidden;
-    z-index: 10;
-    /* transition: max-height 0.8s ease-out; */
-}
-
-header nav .menu .sub-menu:hover ul {
-    max-height: 400px;
-}
-
-header nav .menu .sub-menu ul li {
-    margin: 20px 0;
-    list-style: none;
-    font-size: 12px;
-    font-weight: bold;
-    width: 90px;
-}
-
 footer {
     position: relative;
     padding: 20px 20px;
@@ -107,7 +87,7 @@ footer .newsletter-form {
 footer .newsletter-input {
     flex: 3;
     margin: 10px 10px 0 0;
-    padding: 0 0 1px 2px;
+    padding: 0 0 2px 2px;
     border: none;
     border-bottom: 2px solid #000000;
     outline: none;
