@@ -88,8 +88,6 @@
     transition: opacity 0.4s ease-out;
 }
 
-
-
 .photo-archive-link:hover {
     opacity: 0.5;
 }
