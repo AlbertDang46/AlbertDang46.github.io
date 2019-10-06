@@ -1,4 +1,14 @@
 .calendar-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 50px 0;
+    font-weight: bold;
+    font-size: 120px;
+}
+
+.calendar-title-indv {
     margin: 30px 0 10px 0;
     text-align: center;
     font-weight: bold;
@@ -8,4 +18,18 @@
 .calendar {
     max-width: 900px;
     margin: 20px auto 40px auto;
+}
+
+#calendarModal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    padding: 10px;
+    width: 200px;
+    background-color: pink;
+    border-radius: 0 10px 10px 10px;
+    z-index: 2;
+    transition: top 0.6s ease-out, left 0.6s ease-out, opacity 0.6s ease-out;
 }
