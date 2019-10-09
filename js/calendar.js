@@ -19,9 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         ],
         eventClick: function(eventClickInfo) {
-            // window.open(eventClickInfo.event.url, '_blank', 'width=700,height=600');
             eventClickInfo.jsEvent.preventDefault();
-
             createCalendarModal(eventClickInfo);
         }
     });
@@ -41,10 +39,8 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         fixedWeekCount: false,
         eventClick: function(eventClickInfo) {
-            window.open(eventClickInfo.event.url, '_blank', 'width=700,height=600');
             eventClickInfo.jsEvent.preventDefault();
-
-            // createCalendarModal(eventClickInfo);
+            createCalendarModal(eventClickInfo);
         }
     });
 
