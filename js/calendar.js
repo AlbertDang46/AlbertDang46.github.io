@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
         header: {
             left: 'prev,next today',
             center: 'title',
-            right: 'dayGridMonth,listYear'
+            right: 'dayGridMonth,listMonth'
         },
         fixedWeekCount: false,
         googleCalendarApiKey: 'AIzaSyAh9AImZEwhdMOwxaMG9Y7ksvoWGLH9L8w',
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
         header: {
             left: 'prev,next today',
             center: 'title',
-            right: 'dayGridMonth,listYear'
+            right: 'dayGridMonth,listMonth'
         },
         googleCalendarApiKey: 'AIzaSyAh9AImZEwhdMOwxaMG9Y7ksvoWGLH9L8w',
         events: {
@@ -53,7 +53,12 @@ document.addEventListener('DOMContentLoaded', function() {
         if(!modal.contains(event.target) && 
             !event.target.classList.contains("fc-title") && 
             !event.target.classList.contains("fc-time") && 
-            !event.target.classList.contains("fc-content") 
+            !event.target.classList.contains("fc-content") &&
+            !event.target.classList.contains("fc-list-item") &&
+            !event.target.classList.contains("fc-list-item-time") &&
+            !event.target.classList.contains("fc-list-item-marker") &&
+            !event.target.classList.contains("fc-list-item-title") &&
+            !event.target.classList.contains("fc-event-dot")
         ) {
             modal.style.opacity = 0;
             modal.style.pointerEvents = "none";
@@ -100,7 +105,8 @@ function createCalendarModal(eventClickInfo ) {
     modal.style.opacity = 1;
     modal.style.pointerEvents = "auto";
     modal.style.top = eventClickInfo.jsEvent.pageY + "px";
-    modal.style.left = eventClickInfo.jsEvent.pageX + "px";    
+    modal.style.left = eventClickInfo.jsEvent.pageX + "px";  
+    console.log(modal.style.opacity);
 }
 
 function getLinkTag(desc) {
