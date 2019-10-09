@@ -1,48 +1,3 @@
-function createCalendarModal(eventClickInfo ) {
-    let modal = document.getElementById('calendarModal');
-
-    modal.innerHTML = "";
-
-    let modalTitle = document.createElement("p");
-    let modalTitleNode = document.createTextNode(eventClickInfo.event.title);
-    modalTitle.appendChild(modalTitleNode);
-    modal.appendChild(modalTitle);
-
-    let eventTimeStr = FullCalendar.formatDate(eventClickInfo.event.start, {
-        weekday: 'short',
-        hour: 'numeric',
-        minute: '2-digit',
-        hour12: true
-    }) + " - " + FullCalendar.formatDate(eventClickInfo.event.end, {
-        hour: 'numeric',
-        minute: '2-digit',
-        hour12: true
-    });
-    let modalTime = document.createElement("p");
-    let modalTimeNode = document.createTextNode(eventTimeStr);
-    modalTime.appendChild(modalTimeNode);
-    modal.appendChild(modalTime);
-
-    if(eventClickInfo.event.extendedProps.location) {
-        let modalLocation = document.createElement("p");
-        let modalLocationNode = document.createTextNode(eventClickInfo.event.extendedProps.location);
-        modalLocation.appendChild(modalLocationNode);
-        modal.appendChild(modalLocation);
-    }
-
-    if(eventClickInfo.event.extendedProps.description) {
-        let modalDesc = eventClickInfo.event.extendedProps.description;
-        modal.innerHTML += modalDesc;
-    }
-
-    if(modal.style.visibility != "visible") {
-        modal.style.visibility = "visible";
-        modal.style.opacity = 1;
-    }
-    modal.style.top = eventClickInfo.jsEvent.pageY + "px";
-    modal.style.left = eventClickInfo.jsEvent.pageX + "px";    
-}
-
 document.addEventListener('DOMContentLoaded', function() {
     let eventsCalendarEl = document.getElementById('eventsCalendar');
     let eventsCalendar = new FullCalendar.Calendar(eventsCalendarEl, {
@@ -64,10 +19,10 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         ],
         eventClick: function(eventClickInfo) {
-            window.open(eventClickInfo.event.url, '_blank', 'width=700,height=600');
+            // window.open(eventClickInfo.event.url, '_blank', 'width=700,height=600');
             eventClickInfo.jsEvent.preventDefault();
 
-            // createCalendarModal(eventClickInfo);
+            createCalendarModal(eventClickInfo);
         }
     });
 
@@ -95,5 +50,72 @@ document.addEventListener('DOMContentLoaded', function() {
 
     eventsCalendar.render();
     agendaCalendar.render();
+
+    window.addEventListener('click', function(event) {
+        let modal = document.getElementById('calendarModal');
+
+        if(!modal.contains(event.target) && 
+            !event.target.classList.contains("fc-title") && 
+            !event.target.classList.contains("fc-time") && 
+            !event.target.classList.contains("fc-content") 
+        ) {
+            modal.style.opacity = 0;
+            modal.style.pointerEvents = "none";
+        }
+    });
 });
+
+function createCalendarModal(eventClickInfo ) {
+    let modal = document.getElementById('calendarModal');
+    let modalTitle = document.getElementById('calendarModalTitle');
+    let modalTime = document.getElementById('calendarModalTime');
+    let modalLocation = document.getElementById('calendarModalLocation');
+    let modalDesc = document.getElementById('calendarModalDesc');
+
+    modalTitle.innerHTML = "";
+    modalTime.innerHTML = "";
+    modalLocation.innerHTML = "";
+    modalDesc.innerHTML = "";
+
+    modalTitle.innerHTML = eventClickInfo.event.title;
+
+    let eventTimeStr = FullCalendar.formatDate(eventClickInfo.event.start, {
+        weekday: 'short',
+        hour: 'numeric',
+        minute: '2-digit',
+        hour12: true
+    }) + " - " + FullCalendar.formatDate(eventClickInfo.event.end, {
+        weekday: 'short',
+        hour: 'numeric',
+        minute: '2-digit',
+        hour12: true
+    });
+    modalTime.innerHTML = eventTimeStr;
+
+    if(eventClickInfo.event.extendedProps.location) {
+        modalLocation.innerHTML = eventClickInfo.event.extendedProps.location;
+    }
+
+    if(eventClickInfo.event.extendedProps.description) {
+        let modalDescStr = eventClickInfo.event.extendedProps.description;
+        modalDesc.innerHTML = getLinkTag(modalDescStr);
+    }
+
+    modal.style.opacity = 1;
+    modal.style.pointerEvents = "auto";
+    modal.style.top = eventClickInfo.jsEvent.pageY + "px";
+    modal.style.left = eventClickInfo.jsEvent.pageX + "px";    
+}
+
+function getLinkTag(desc) {
+    let newLink = "";
+
+    if(desc.includes('</a>')) {
+        newLink = desc.slice(0, 2) + " target=\"_blank\"" + desc.slice(2);
+        return newLink;
+    }
+
+    newLink = desc.replace(/(?:(https?\:\/\/[^\s]+))/m, '<a href="$1" target="_blank">$1</a>');
+    return newLink;
+}
 
