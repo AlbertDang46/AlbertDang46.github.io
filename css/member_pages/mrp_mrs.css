@@ -1,4 +1,4 @@
-.mf-title {
+.mr-title {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,7 +8,7 @@
     font-size: 120px;
 }
 
-.become-member {
+.mrp {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,23 +17,47 @@
     padding: 30px 100px 30px 100px;
 }
 
-.become-member-title {
+.mrp-title {
     font-weight: bold;
     font-size: 35px;
     margin-bottom: 5px;
 }
 
-.become-member-subtitle {
-    font-weight: bold;
-    font-size: 18px;
-    margin-bottom: 30px;
-}
-
-.become-member-desc {
+.mrp-desc {
     font-size: 20px;
     line-height: 22pt;
     text-align: center;
-    width: 500px;
+}
+
+.mr-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 50px 0;
+    font-weight: bold;
+    font-size: 120px;
+}
+
+.mrs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 30px 100px 30px 100px;
+}
+
+.mrs-title {
+    font-weight: bold;
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+
+.mrs-desc {
+    font-size: 20px;
+    line-height: 22pt;
+    text-align: center;
     margin-bottom: 30px;
 }
 
