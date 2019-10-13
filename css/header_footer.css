@@ -38,6 +38,23 @@ header nav .menu .sub-menu a:hover {
     opacity: 0.5;
 }
 
+header nav .menu .sub-menu ul {
+    position: absolute;
+    list-style: none;
+    width: 300px;
+    display: none;
+    padding-top: 10px;
+}
+
+header nav .menu .sub-menu:hover ul {
+    display: block;
+}
+
+header nav .menu .sub-menu ul li {
+    padding-bottom: 15px;
+    text-shadow: 1px 1px 1px whitesmoke;
+}
+
 footer {
     position: relative;
     padding: 20px 20px;
