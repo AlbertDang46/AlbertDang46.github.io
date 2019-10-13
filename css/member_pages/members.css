@@ -1,0 +1,59 @@
+.mf-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 50px 0;
+    font-weight: bold;
+    font-size: 120px;
+}
+
+.become-member {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 30px 100px 30px 100px;
+}
+
+.become-member-title {
+    font-weight: bold;
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+
+.become-member-subtitle {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.become-member-desc {
+    font-size: 20px;
+    line-height: 22pt;
+    text-align: center;
+    width: 500px;
+    margin-bottom: 30px;
+}
+
+.resources-form-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0 30px 0;
+    width: 550px; 
+    background-color: lightgray;
+    border-radius: 15px;
+    opacity: 0.8;
+    font-size: 36px;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.8);
+    transition: 0.6s ease;
+}
+
+.resources-form-box:hover {
+    background-color: rgba(0,0,0,0.8);
+    color: rgba(255, 255, 255, 0.8);
+}

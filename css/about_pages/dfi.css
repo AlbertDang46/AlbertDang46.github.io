@@ -1,0 +1,30 @@
+.dfi-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 50px 0;
+    font-weight: bold;
+    font-size: 120px;
+}
+
+.dfi-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 30px 100px 30px 100px;
+}
+
+.dfi-content-title {
+    font-weight: bold;
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+
+.dfi-content-desc {
+    font-size: 20px;
+    line-height: 22pt;
+    text-align: center;
+}
