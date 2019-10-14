@@ -1,0 +1,32 @@
+.family-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 50px 0;
+    font-weight: bold;
+    font-size: 120px;
+}
+
+.family-system {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 30px 100px 30px 100px;
+}
+
+.family-system-title {
+    font-weight: bold;
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+
+.family-system-desc {
+    font-size: 20px;
+    line-height: 22pt;
+    text-align: center;
+    width: 800px;
+    margin-bottom: 30px;
+}
