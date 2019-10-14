@@ -25,6 +25,27 @@
     margin-bottom: 25px;
 }
 
+.resources-form-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0 30px 0;
+    width: 550px; 
+    background-color: lightgray;
+    border-radius: 15px;
+    opacity: 0.8;
+    font-size: 36px;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.8);
+    transition: 0.6s ease;
+}
+
+.resources-form-box:hover {
+    background-color: rgba(0,0,0,0.8);
+    color: rgba(255, 255, 255, 0.8);
+}
+
 .kiwanis-luncheon {
     display: flex;
     align-items: center;
