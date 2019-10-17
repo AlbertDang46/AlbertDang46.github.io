@@ -25,11 +25,19 @@
     margin-bottom: 25px;
 }
 
+.events-box-desc {
+    font-size: 22px;
+    margin: 20px 0 25px 0;
+    width: 1000px;
+    text-align: center;
+}
+
 .resources-form-box {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 30px 0 30px 0;
+    margin-bottom: 30px;
     width: 550px; 
     background-color: lightgray;
     border-radius: 15px;
