@@ -8,7 +8,7 @@
     font-size: 120px;
 }
 
-.photo-archive {
+.archive-box {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,13 +17,13 @@
     padding: 30px 0 10px 0;
 }
 
-.photo-archive-title {
+.archive-box-title {
     font-weight: bold;
     font-size: 35px;
     margin-bottom: 5px;
 }
 
-.photo-archive-list {
+.archive-box-list {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -32,7 +32,7 @@
     padding: 30px 0 0 0;
 }
 
-.photo-archive-item {
+.archive-box-item {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -42,27 +42,27 @@
     margin-bottom: 20px;
 }
 
-.photo-archive-item:nth-child(1) .photo-archive-year, .photo-archive-item:nth-child(1) .photo-archive-link {
+.archive-box-item:nth-child(1) .archive-box-year, .archive-box-item:nth-child(1) .archive-box-link {
     background-color: purple;
 }
 
-.photo-archive-item:nth-child(2) .photo-archive-year, .photo-archive-item:nth-child(2) .photo-archive-link {
+.archive-box-item:nth-child(2) .archive-box-year, .archive-box-item:nth-child(2) .archive-box-link {
     background-color: blue;
 }
 
-.photo-archive-item:nth-child(3) .photo-archive-year, .photo-archive-item:nth-child(3) .photo-archive-link {
+.archive-box-item:nth-child(3) .archive-box-year, .archive-box-item:nth-child(3) .archive-box-link {
     background-color: coral;
 }
 
-.photo-archive-item:nth-child(4) .photo-archive-year, .photo-archive-item:nth-child(4) .photo-archive-link {
+.archive-box-item:nth-child(4) .archive-box-year, .archive-box-item:nth-child(4) .archive-box-link {
     background-color: yellow;
 }
 
-.photo-archive-item:nth-child(5) .photo-archive-year, .photo-archive-item:nth-child(5) .photo-archive-link {
+.archive-box-item:nth-child(5) .archive-box-year, .archive-box-item:nth-child(5) .archive-box-link {
     background-color: green;
 }
 
-.photo-archive-year {
+.archive-box-year {
     display: flex;
     flex: 1;
     justify-content: center;
@@ -75,7 +75,7 @@
     opacity: 0.5;
 }
 
-.photo-archive-link {
+.archive-box-link {
     display: flex;
     flex: 2;
     justify-content: center;
@@ -85,10 +85,11 @@
     font-weight: bold;
     font-size: 100px;
     color: white;
+    text-decoration: none;
     transition: opacity 0.4s ease-out;
 }
 
-.photo-archive-link:hover {
+.archive-box-link:hover {
     opacity: 0.5;
 }
 
