@@ -131,8 +131,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     margin: 10px;
     background-color: lightblue;
     font-weight: bold;
@@ -164,5 +164,9 @@
 
 .announcements-desc {
     font-size: 20px;
+}
+
+.announcements-desc li {
+    margin-bottom: 15px;
 }
 
