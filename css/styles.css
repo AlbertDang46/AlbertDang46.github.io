@@ -40,10 +40,19 @@ body{
 .box-area img {
     position: absolute;
     display: block;
-    width: 25px;
-    height: 25px;
-    animation: animate 30s linear infinite;
+    width: 100px;
+    height: 100px;
+    
+}
+
+.bot-to-top img { 
+    animation: animate-bot-to-top 30s linear infinite;
     bottom: -150px;
+}
+
+.top-to-bot img {
+    animation: animate-top-to-bot 30s linear infinite;
+    top: -150px;
 }
 
 .box-area img:nth-child(1) {
@@ -55,8 +64,8 @@ body{
 
 .box-area img:nth-child(2) {
     left: 12%;
-    width: 50;
-    height: 50px;
+    width: 130;
+    height: 130px;
     animation-delay: 1.5s;
     animation-duration: 10s;
 }
@@ -78,8 +87,8 @@ body{
 
 .box-area img:nth-child(5) {
     left: 65%;
-    width: 40px;
-    height: 40px;
+    width: 120px;
+    height: 120px;
     animation-delay: 0s;
 }
 
@@ -90,7 +99,7 @@ body{
     animation-delay: 3.5s;
 }
 
-@keyframes animate {
+@keyframes animate-bot-to-top {
     0% {
         transform: translateY(0) rotate(0deg);
         opacity: 0.4;
@@ -98,6 +107,18 @@ body{
 
     100% {
         transform: translateY(-2000px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes animate-top-to-bot {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.4;
+    }
+
+    100% {
+        transform: translateY(2000px) rotate(-360deg);
         opacity: 0;
     }
 }
