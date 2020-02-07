@@ -17,6 +17,27 @@
     padding: 30px 100px 30px 100px;
 }
 
+.mrp-grid {
+    display: grid;
+    padding: 50px 0;
+    place-content: center;
+    place-items: center;
+    grid-template-columns: repeat(5, 200px);
+    grid-template-rows: repeat(18, 50px);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.mrp-grid-start {
+    display: grid;
+    grid-template-columns: repeat(5, 200px);
+    grid-template-rows: 50px;
+    place-items: center;
+    grid-area: 1 / 1 / 2 / 6;
+    font-size: 30px;
+    font-weight: 700;
+}
+
 .mrp-title {
     font-weight: bold;
     font-size: 35px;
